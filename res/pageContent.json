@@ -1,0 +1,38 @@
+[
+   {
+    "date": "22 Oct 2018",
+    "author": "JK",
+    "title": "Built a website",
+    "content": "Today I created the index.html of my page. A website is born."
+  },
+  {
+    "date": "23 Oct 2018",
+    "author": "JK",
+    "title": "Added the contact form",
+    "content": "With the help of <a href=\"https://www.w3schools.com/\" target=\"_blank\">w3schools</a> I added the contact form to my page. PHP is missing and the Google API key isn't working but it looks good, which is fine."
+  },
+  {
+    "date": "23 Oct 2018",
+    "author": "JK",
+    "title": "Newsfeed is working",
+    "content": "I had the idea to include a newsfeed in my website. The news are provided by a .json file which include the information. The content of said file is parsed in JavaScript on load of the index.html."
+  },
+  {
+    "date": "24 Oct 2018",
+    "author": "JK",
+    "title": "Styling is done",
+    "content": "With my little helper <a href=\"https://www.w3schools.com/\" target=\"_blank\">w3schools</a> I did the styling for my page. It's nothing special but I still like it and that's what really counts. Right?"
+  },
+  {
+    "date": "24 Oct 2018",
+    "author": "JK",
+    "title": "Pricing page was added",
+    "content": "A pricing overview has been added to my page. Buttons don't work and I have nothing to offer, but now I could if I wanted to! I think I don't have to mention that <a href=\"https://www.w3schools.com/\" target=\"_blank\">w3schools</a> has been helping a lot writing the html and css code for this page."
+  },
+  {
+    "date": "01 Nov 2018",
+    "author": "JK",
+    "title": "Footer and sidebar just got content - at least kind of",
+    "content": "Today I had the glorious idea to add some content to my footer and sidebar. It's really nothing special but you can get to my CodePen dashboard via my footer and to my CSS creations via my sidebar. Yay!"
+  }
+]

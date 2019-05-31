@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MyPage - Pricing</title>
+  <link rel="stylesheet" href="css/style.processed.css">
+  <link rel="stylesheet" href="css/pricing.processed.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous">
+  </script>
+  <script>
+    $(function() {
+      $("#header").load("header.html");
+      $("#leftSide").load("leftSide.html");
+      $("#rightSide").load("rightSide.html");
+      $("#footer").load("footer.html");
+    });
+  </script>
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <div class="row">
+    <div id="leftSide" class="side">
+
+    </div>
+    <div class="main">
+      
+      <div class="columns">
+        <ul class="price">
+          <li class="pricingHeader">Basic</li>
+          <li class="grey">9.99 € / year</li>
+          <li>1 A</li>
+          <li>1 B</li>
+          <li>1 C</li>
+          <li>1 D</li>
+          <li class="grey"><a href="#" class="button">Sign Up</a></li>
+        </ul>
+      </div>
+      
+        <div class="columns">
+          <ul class="price">
+          <li class="pricingHeader">Advanced</li>
+          <li class="grey">29.99 € / year</li>
+          <li>3 A</li>
+          <li>3 B</li>
+          <li>3 C</li>
+          <li>3 D</li>
+          <li class="grey"><a href="#" class="button">Sign Up</a></li>
+        </ul>
+        </div>
+      
+      <div class="columns">
+          <ul class="price">
+          <li class="pricingHeader">Professional</li>
+          <li class="grey">99.99 € / year</li>
+          <li>10 A</li>
+          <li>10 B</li>
+          <li>10 C</li>
+          <li>10 D</li>
+          <li class="grey"><a href="#" class="button">Sign Up</a></li>
+        </ul>
+        </div>
+      
+    </div>
+    <div id="rightSide" class="side">
+
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  
+  <script>
+      var buttons = document.getElementsByClassName('btn');
+    for(var i = 0; i < buttons.length; i++){
+      console.log(buttons[i]);
+      if(buttons[i].getAttribute('class').includes('active')){
+        buttons[i].setAttribute('class', buttons[i].getAttribute('class').replace('active',''));
+      }
+    }
+    
+    setTimeout(function(){
+      document.getElementById('pricingButton').setAttribute('class', document.getElementById('homeButton').getAttribute('class') + ' active');
+    }, 600);
+  </script>
+
+</body>
+
+</html>

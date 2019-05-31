@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MyPage - Contact</title>
+  <link rel="stylesheet" href="css/style.processed.css">
+  <link rel="stylesheet" href="css/contact.processed.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous">
+  </script>
+  <script>
+    $(function() {
+      $("#header").load("header.html");
+      $("#leftSide").load("leftSide.html");
+      $("#rightSide").load("rightSide.html");
+      $("#footer").load("footer.html");
+    });
+  </script>
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <div class="row">
+    <div id="leftSide" class="side">
+
+    </div>
+    <div class="main">
+      <div class="container">
+        <div style="text-align:center">
+          <h2>Contact Us</h2>
+          <p>Swing by for a cup of coffee, or leave us a message:</p>
+        </div>
+        <div class="contactRow">
+          <div class="column">
+            <div id="map" style="width:100%;height:500px"></div>
+          </div>
+          <div class="column">
+            <form action="/action_page.php">
+              <label for="fname">First name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                <option value="germany">Germany</option>
+              </select>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rightSide" class="side">
+
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <!-- Initialize Google Maps -->
+  <script>
+    function myMap() {
+      var myCenter = new google.maps.LatLng(51.508742, -0.120850);
+      var mapCanvas = document.getElementById("map");
+      var mapOptions = {
+        center: myCenter,
+        zoom: 12
+      };
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      var marker = new google.maps.Marker({
+        position: myCenter
+      });
+      marker.setMap(map);
+    }
+  </script>
+  
+  <script>
+      var buttons = document.getElementsByClassName('btn');
+    for(var i = 0; i < buttons.length; i++){
+      console.log(buttons[i]);
+      if(buttons[i].getAttribute('class').includes('active')){
+        buttons[i].setAttribute('class', buttons[i].getAttribute('class').replace('active',''));
+      }
+    }
+    
+    setTimeout(function(){
+      document.getElementById('contactButton').setAttribute('class', document.getElementById('homeButton').getAttribute('class') + ' active');
+    }, 600);
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+</body>
+
+</html>
