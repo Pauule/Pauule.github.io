@@ -2,58 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Refresh" content="0; url=http://jakla.me/findyourway/FindYourWay/web/">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>MyPage - News</title>
-  <link rel="stylesheet" href="css/style.processed.css">
-  <script src="lib/parsePageContent.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous">
-  </script>
   <script>
     window.location = "http://jakla.me/findyourway/FindYourWay/web/";
-    $(function() {
-      $("#header").load("header.html");
-      $("#leftSide").load("leftSide.html");
-      $("#rightSide").load("rightSide.html");
-      $("#footer").load("footer.html");
     });
   </script>
 </head>
 
 <body>
-
-  <div id="header"></div>
-
-  <div class="row">
-    <div id="leftSide" class="side">
-      
-    </div>
-    <div class="main">
-
-    </div>
-    <div id="rightSide" class="side">
-
-    </div>
-  </div>
-
-  <div id="footer"></div>
-
   <script>
     window.location = "http://jakla.me/findyourway/FindYourWay/web/"
-    parseContent();
-    var buttons = document.getElementsByClassName('btn');
-    for(var i = 0; i < buttons.length; i++){
-      console.log(buttons[i]);
-      if(buttons[i].getAttribute('class').includes('active')){
-        buttons[i].setAttribute('class', buttons[i].getAttribute('class').replace('active',''));
-      }
-    }
-    
-    setTimeout(function(){
-      document.getElementById('homeButton').setAttribute('class', document.getElementById('homeButton').getAttribute('class') + ' active');
-    }, 600);
   </script>
 
 </body>
